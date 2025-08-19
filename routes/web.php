@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/form-create-color', function () {
+    return view('form-create-color');
+})->name('form-create-color');
