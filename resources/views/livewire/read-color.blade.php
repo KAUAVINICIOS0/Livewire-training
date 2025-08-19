@@ -29,4 +29,6 @@ new class extends Component {
             @endforeach
         </tbody>
     </table>
+
+    <a href="{{ url('form-create-color') }}">create color</a>
 </div>

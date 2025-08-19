@@ -2,7 +2,6 @@
 
 use App\Models\Color;
 use Livewire\Volt\Component;
-use function Livewire\Volt\{state};
  
 new class extends Component 
 {
@@ -13,7 +12,7 @@ new class extends Component
         Color::create([
             'name' => $this->name 
         ]);
-        return redirect('/form-create-color');
+        return redirect('/form-read-color');
     }
 }
 
@@ -24,5 +23,6 @@ new class extends Component
         <input type="text" wire:model.live="name">
         <input type="submit" value="send">
     </form>
+    <a href="{{ url('form-read-color') }}">create color</a>
 
 </div>
