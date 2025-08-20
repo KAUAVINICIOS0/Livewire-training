@@ -3,14 +3,11 @@
 use Livewire\Volt\Volt;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/form-read-color', function(){
-    return view('form-read-color');
-})->name('form-read-color');
+Volt::route('/form-read-color', 'read-color');
 
-Route::get('/form-create-color', function () {
-    return view('form-create-color');
-})->name('form-create-color');
+Volt::route('/form-delete-color/{colorid}', 'read-color');
+
+Volt::route('/form-create-color', 'create-color');
 
 Volt::route('/form-update-color/{colorid}', 'update-color');
 
-Volt::route('/form-delete-color/{colorid}', 'read-color');
