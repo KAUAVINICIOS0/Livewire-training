@@ -38,4 +38,5 @@ new class extends Component {
     </table>
 
     <a href="{{ url('form-create-color') }}">create color</a>
+    <a href="{{ url('/') }}">Back</a>
 </div>
