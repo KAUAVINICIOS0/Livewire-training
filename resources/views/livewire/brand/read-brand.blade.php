@@ -31,4 +31,5 @@ new class extends Component {
     </table>
 
     <a href="{{ url('/') }}">Back</a>
+    <a href="{{ url('/form-create-brand') }}">Create Brand</a>
 </div>
