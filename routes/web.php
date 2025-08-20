@@ -16,3 +16,5 @@ Volt::route('/form-update-color/{colorid}', 'color.update-color');
 Volt::route('/form-read-brand', 'brand.read-brand');
 
 Volt::route('/form-create-brand', 'brand.create-brand');
+
+Volt::route('/form-update-brand/{brandid}', 'brand.update-brand');

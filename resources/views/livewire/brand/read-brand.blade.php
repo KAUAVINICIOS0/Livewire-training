@@ -25,6 +25,7 @@ new class extends Component {
             @foreach ($brands as $brand)
             <tr>
                 <td>{{ $brand->name }}</td>
+                <td><a href="{{ url('/form-update-brand', [$brand->id]) }}">Update</a></td>
             </tr>
             @endforeach
         </tbody>
