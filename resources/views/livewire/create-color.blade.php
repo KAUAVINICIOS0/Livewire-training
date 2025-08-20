@@ -12,7 +12,7 @@ new class extends Component
         Color::create([
             'name' => $this->name 
         ]);
-        return redirect('/form-read-color');
+        $this->redirect('/form-read-color');
     }
 }
 
@@ -23,6 +23,6 @@ new class extends Component
         <input type="text" wire:model.live="name">
         <input type="submit" value="send">
     </form>
-    <a href="{{ url('form-read-color') }}">create color</a>
+    <a href="{{ url('form-read-color') }}">read color</a>
 
 </div>

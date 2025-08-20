@@ -1,5 +1,6 @@
 <?php
 
+use Livewire\Attributes\Url;
 use App\Models\Color;
 use Livewire\Volt\Component;
 
@@ -10,6 +11,10 @@ new class extends Component {
         return [
             'colors' => Color::all(),
         ];
+    }
+
+    public function delete(Color $color){
+        $color->delete();
     }
     
 };?>
@@ -25,6 +30,8 @@ new class extends Component {
             @foreach ($colors as $color)
                 <tr>
                     <td>{{ $color->name }}</td>
+                    <td><a href="{{ url('form-update-color', $color->id) }}">update color</a></td>
+                    <td><button wire:click="delete({{ $color->id }})" wire:confirm="Are you sure you want to erase a color?">Deletar</button></td>
                 </tr>
             @endforeach
         </tbody>
